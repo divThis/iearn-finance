@@ -478,7 +478,7 @@ class InvestSimple extends Component {
     return assets.filter((asset) => {
       return (hideV1 === true || asset.version !== 1)
     }).filter((asset) => {
-      return (asset.version === 1 && (asset.investedBalance).toFixed(4) > 0)
+      return (asset.version === 1 && (asset.investedBalance) > 0)
     }).filter((asset) => {
       return !(asset.symbol === "iDAI")
     }).map((asset) => {
@@ -509,7 +509,7 @@ class InvestSimple extends Component {
                 <Typography variant={ 'h5' }>{ t('InvestSimple.InterestRate') }</Typography>
               </div>
               <div className={classes.heading}>
-                <Typography variant={ 'h3' }>{(asset.balance).toFixed(4)+' '+( asset.tokenSymbol ? asset.tokenSymbol : asset.symbol )}</Typography>
+                <Typography variant={ 'h3' }>{asset.balance+' '+( asset.tokenSymbol ? asset.tokenSymbol : asset.symbol )}</Typography>
                 <Typography variant={ 'h5' }>{ t('InvestSimple.AvailableBalance') }</Typography>
               </div>
             </div>
@@ -559,7 +559,7 @@ class InvestSimple extends Component {
                 <Typography variant={ 'h5' }>{ t('InvestSimple.InterestRate') }</Typography>
               </div>
               <div className={classes.heading}>
-                <Typography variant={ 'h3' }>{(asset.balance).toFixed(4)+' '+( asset.tokenSymbol ? asset.tokenSymbol : asset.symbol )}</Typography>
+                <Typography variant={ 'h3' }>{(asset.balance)+' '+( asset.tokenSymbol ? asset.tokenSymbol : asset.symbol )}</Typography>
                 <Typography variant={ 'h5' }>{ t('InvestSimple.AvailableBalance') }</Typography>
               </div>
             </div>
@@ -609,7 +609,7 @@ class InvestSimple extends Component {
                 <Typography variant={ 'h5' }>{ t('InvestSimple.InterestRate') }</Typography>
               </div>
               <div className={classes.heading}>
-                <Typography variant={ 'h3' }>{(asset.balance).toFixed(4)+' '+( asset.tokenSymbol ? asset.tokenSymbol : asset.symbol )}</Typography>
+                <Typography variant={ 'h3' }>{(asset.balance)+' '+( asset.tokenSymbol ? asset.tokenSymbol : asset.symbol )}</Typography>
                 <Typography variant={ 'h5' }>{ t('InvestSimple.AvailableBalance') }</Typography>
               </div>
             </div>
