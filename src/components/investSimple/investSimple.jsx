@@ -270,7 +270,7 @@ class InvestSimple extends Component {
       snackbarType: null,
       snackbarMessage: null,
       hideV1: true,
-      value: 1,
+      value: 2,
       disclaimerClosed: disclaimerClosed
     }
 
