@@ -1000,7 +1000,7 @@ class Store {
     } else {
       var amountToSend = web3.utils.toWei(amount, "ether")
       if (asset.decimals !== 18) {
-        amountToSend = amount*10**asset.decimals;
+        amountToSend = Math.round(amount*10**asset.decimals);
       }
       iEarnContract.methods[asset.invest](amountToSend).send({ from: account.address, gasPrice: web3.utils.toWei('6', 'gwei') })
         .on('transactionHash', function(hash){
